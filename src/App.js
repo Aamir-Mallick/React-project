@@ -8,6 +8,7 @@ import { InputComponent } from "./components/InputComponent";
 import { Enhanced } from "./components/LogInLogOut";
 import { RenderProps } from "./components/RenderProps";
 import { ContextComponent } from "./components/ContextComponent";
+import { EhancedSearchBar } from "./components/search/SearchBar";
 
 export const myContext = createContext(null);
 export const dispatchContext = createContext(null);
@@ -46,7 +47,7 @@ const reducer = (state, action) => {
 };
 function App() {
   const [state, dispatch] = useReducer(reducer, { name: "", age: "" });
-  console.log("state", state);
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -58,11 +59,12 @@ function App() {
         {/* <RenderProps name={(data) => renderNewValue(data)}>
           this is new world
         </RenderProps> */}
-        <myContext.Provider value={state}>
+        {/* <myContext.Provider value={state}>
           <dispatchContext.Provider value={dispatch}>
             <ContextComponent />
           </dispatchContext.Provider>
-        </myContext.Provider>
+        </myContext.Provider> */}
+        <EhancedSearchBar />
       </header>
     </div>
   );
