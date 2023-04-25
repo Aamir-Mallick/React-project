@@ -9,6 +9,7 @@ import { Enhanced } from "./components/LogInLogOut";
 import { RenderProps } from "./components/RenderProps";
 import { ContextComponent } from "./components/ContextComponent";
 import { EhancedSearchBar } from "./components/search/SearchBar";
+import { Crud } from "./components/Crud/Crud";
 
 export const myContext = createContext(null);
 export const dispatchContext = createContext(null);
@@ -64,7 +65,8 @@ function App() {
             <ContextComponent />
           </dispatchContext.Provider>
         </myContext.Provider> */}
-        <EhancedSearchBar />
+        {/* <EhancedSearchBar /> */}
+        <Crud />
       </header>
     </div>
   );
